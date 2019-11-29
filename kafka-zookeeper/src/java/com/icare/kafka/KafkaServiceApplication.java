@@ -1,7 +1,7 @@
-package com.icare.dubbo;
+package com.icare.kafka;
 
-import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
@@ -13,11 +13,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *    version : v1.0
  * </pre>
  */
-@EnableDubbo
-@SpringBootApplication(scanBasePackages = {"com.icare.dubbo.rest"})
-public class DubboRestApplication {
+@SpringBootApplication
+public class KafkaServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DubboRestApplication.class,args);
+        SpringApplication.run(KafkaServiceApplication.class,args);
     }
 }

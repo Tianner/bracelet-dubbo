@@ -5,6 +5,7 @@ import com.icare.dubbo.api.UserService;
 import com.icare.dubbo.common.ResponseResult;
 import com.icare.dubbo.dto.UserDto;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/dubbo/")
 public class DubboRest {
 
-    @Reference
+    @Reference(group = "bracelet-dubbo-serivce")
     private UserService userService;
 
     @GetMapping("getUserById")
